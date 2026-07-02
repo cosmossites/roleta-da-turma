@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Roleta da Turma">
+  <rect width="512" height="512" rx="96" fill="#0f766e"/>
+  <circle cx="256" cy="262" r="160" fill="#ffffff" opacity="0.96"/>
+  <path d="M256 102a160 160 0 0 1 138.6 80l-138.6 80Z" fill="#14b8a6"/>
+  <path d="M394.6 182A160 160 0 0 1 394.6 342L256 262Z" fill="#f59e0b"/>
+  <path d="M394.6 342A160 160 0 0 1 256 422V262Z" fill="#0e7490"/>
+  <path d="M256 422A160 160 0 0 1 117.4 342L256 262Z" fill="#be123c"/>
+  <path d="M117.4 342A160 160 0 0 1 117.4 182L256 262Z" fill="#334155"/>
+  <path d="M117.4 182A160 160 0 0 1 256 102V262Z" fill="#ffffff"/>
+  <circle cx="256" cy="262" r="48" fill="#0f766e"/>
+  <path d="M256 48 296 116H216Z" fill="#f59e0b"/>
+  <text x="256" y="283" text-anchor="middle" font-family="Arial, sans-serif" font-size="58" font-weight="800" fill="#ffffff">R</text>
+</svg>
