@@ -8,10 +8,10 @@ export const THEME_COLORS: Record<
 > = {
   emerald: {
     name: 'Esmeralda',
-    primary: '#0f766e',
-    secondary: '#14b8a6',
-    soft: '#ccfbf1',
-    contrast: '#042f2e',
+    primary: '#0b766f',
+    secondary: '#138f86',
+    soft: '#e6f4f2',
+    contrast: '#063c38',
   },
   cyan: {
     name: 'Ciano',

@@ -67,7 +67,7 @@ export const FullscreenMode = ({
         <div className="inline-actions" style={{ justifyContent: 'center' }}>
           <button className="button button-primary button-large" type="button" onClick={onSpin} disabled={spinning}>
             <RotateCw size={21} aria-hidden="true" />
-            {spinning ? 'Girando...' : 'Girar roleta'}
+            {spinning ? 'Sorteando...' : 'Sortear'}
           </button>
         </div>
         {results.length ? (

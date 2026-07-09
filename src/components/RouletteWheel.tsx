@@ -38,7 +38,7 @@ const describeSlice = (startAngle: number, endAngle: number) => {
 }
 
 const readableFill = (index: number, primary: string, secondary: string, soft: string) => {
-  const palette = [primary, secondary, '#f59e0b', '#0f172a', soft, '#ffffff']
+  const palette = [primary, '#f8fbfb', secondary, soft, '#17202a', '#ffffff']
   return palette[index % palette.length]
 }
 
@@ -79,12 +79,12 @@ export const RouletteWheel = ({
       >
         <defs>
           <radialGradient id="wheelDepth" cx="50%" cy="45%" r="58%">
-            <stop offset="0%" stopColor="#ffffff" stopOpacity="0.34" />
+            <stop offset="0%" stopColor="#ffffff" stopOpacity="0.14" />
             <stop offset="66%" stopColor="#ffffff" stopOpacity="0" />
-            <stop offset="100%" stopColor="#000000" stopOpacity="0.16" />
+            <stop offset="100%" stopColor="#000000" stopOpacity="0.07" />
           </radialGradient>
         </defs>
-        <circle cx="250" cy="250" r="248" fill="#ffffff" stroke="rgba(15,23,42,0.14)" strokeWidth="8" />
+        <circle cx="250" cy="250" r="248" fill="#ffffff" stroke="rgba(15,23,42,0.16)" strokeWidth="8" />
         {participants.map((participant, index) => {
           const start = index * segmentAngle
           const end = start + segmentAngle

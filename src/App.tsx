@@ -31,6 +31,8 @@ const AppContent = () => {
           </div>
         </div>
 
+        <span className="creator-credit">Criado por Guilherme Paz</span>
+
         <nav className="header-actions" aria-label="Navegação principal">
           <button className="button button-secondary" type="button" onClick={() => setView('home')}>
             <Home size={17} aria-hidden="true" />

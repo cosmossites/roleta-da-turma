@@ -65,7 +65,7 @@ export const WheelControls = ({
 
         <button className="button button-primary button-large" type="button" onClick={onSpin} disabled={isSpinning}>
           <RotateCw size={21} aria-hidden="true" />
-          {isSpinning ? 'Girando...' : 'Girar roleta'}
+          {isSpinning ? 'Sorteando...' : 'Sortear'}
         </button>
 
         <div className="switch-row">
