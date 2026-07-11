@@ -1,4 +1,4 @@
-import { Download, Home, MonitorPlay, Settings, Shuffle } from 'lucide-react'
+import { Download, GraduationCap, Home, MonitorPlay, Settings, UserRound } from 'lucide-react'
 import { useState } from 'react'
 import { SettingsModal } from './components/SettingsModal'
 import { ToastNotification } from './components/ToastNotification'
@@ -23,15 +23,18 @@ const AppContent = () => {
       <header className="app-header">
         <div className="brand">
           <span className="brand-mark">
-            <Shuffle size={20} aria-hidden="true" />
+            <GraduationCap size={20} aria-hidden="true" />
           </span>
           <div>
-            <h1>Roleta da Turma</h1>
-            <p>Sorteios por número ou nome, salvos neste navegador.</p>
+            <h1>Roleta Escolar <span>FAETEC</span></h1>
+            <p>Turmas, alunos, histórico e sorteios em um só app.</p>
           </div>
         </div>
 
-        <span className="creator-credit">Criado por Guilherme Paz</span>
+        <span className="creator-credit">
+          <UserRound size={17} aria-hidden="true" />
+          Criador: Guilherme Paz
+        </span>
 
         <nav className="header-actions" aria-label="Navegação principal">
           <button className="button button-secondary" type="button" onClick={() => setView('home')}>
@@ -69,6 +72,12 @@ const AppContent = () => {
       </header>
 
       {view === 'home' ? <HomePage onOpenWheel={() => setView('wheel')} /> : <WheelPage onHome={() => setView('home')} />}
+
+      <footer className="creator-banner">
+        <UserRound size={24} aria-hidden="true" />
+        <strong>Criador:</strong>
+        <span>Guilherme Paz</span>
+      </footer>
 
       <SettingsModal open={settingsOpen} onClose={() => setSettingsOpen(false)} />
       <ToastNotification toasts={toasts} onDismiss={dismissToast} />

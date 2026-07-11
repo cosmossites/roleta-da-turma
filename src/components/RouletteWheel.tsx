@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { CircleDot } from 'lucide-react'
+import { Sparkles } from 'lucide-react'
 import { THEME_COLORS } from '../data/defaults'
 import type { ParticipantOption, ThemeKey } from '../types'
 
@@ -37,14 +37,14 @@ const describeSlice = (startAngle: number, endAngle: number) => {
   ].join(' ')
 }
 
-const readableFill = (index: number, primary: string, secondary: string, soft: string) => {
-  const palette = [primary, '#f8fbfb', secondary, soft, '#17202a', '#ffffff']
+const readableFill = (index: number, primary: string, secondary: string) => {
+  const palette = [primary, secondary, '#ffc400', '#003a8c', '#1789ff', '#ffdf45']
   return palette[index % palette.length]
 }
 
 const readableText = (fill: string) => {
-  return fill === '#ffffff' || fill.startsWith('#c') || fill.startsWith('#e') || fill.startsWith('#f')
-    ? '#0f172a'
+  return fill === '#ffc400' || fill === '#ffdf45' || fill.startsWith('#f')
+    ? '#08306f'
     : '#ffffff'
 }
 
@@ -91,13 +91,13 @@ export const RouletteWheel = ({
           const mid = start + segmentAngle / 2
           const point = polarToCartesian(250, count > 45 ? 176 : 168, mid)
           const fill =
-            participant.id === highlightedId ? '#f59e0b' : readableFill(index, colors.primary, colors.secondary, colors.soft)
+            participant.id === highlightedId ? '#ffc400' : readableFill(index, colors.primary, colors.secondary)
           const text = count > 60 && participant.label.length > 3 ? String(index + 1) : participant.shortLabel
           const rotate = mid > 90 && mid < 270 ? mid + 180 : mid
 
           return (
             <g key={participant.id}>
-              <path d={describeSlice(start, end)} fill={fill} stroke="rgba(255,255,255,0.72)" strokeWidth="1" />
+              <path d={describeSlice(start, end)} fill={fill} stroke="rgba(255,255,255,0.86)" strokeWidth="2" />
               {shouldRenderText ? (
                 <text
                   x={point.x}
@@ -118,7 +118,8 @@ export const RouletteWheel = ({
         <circle cx="250" cy="250" r="244" fill="url(#wheelDepth)" pointerEvents="none" />
       </motion.svg>
       <div className="wheel-center" aria-hidden="true">
-        <CircleDot size={34} />
+        <Sparkles size={22} />
+        <span>Sortear</span>
       </div>
     </div>
   )

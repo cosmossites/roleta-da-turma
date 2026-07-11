@@ -1,5 +1,5 @@
 import { type CSSProperties, useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { ArrowLeft, Dices, Sparkles } from 'lucide-react'
+import { ArrowLeft, ChevronDown, Dices, Sparkles, Users } from 'lucide-react'
 import { ConfettiBurst } from '../components/ConfettiBurst'
 import { ConfirmationModal } from '../components/ConfirmationModal'
 import { EditWheelModal } from '../components/EditWheelModal'
@@ -287,14 +287,14 @@ export const WheelPage = ({ onHome }: WheelPageProps) => {
         onSettings={() => setSettingsOpen(true)}
       />
 
-      <section className="panel">
+      <section className="panel wheel-panel">
         <div className="panel-header">
           <div className="brand">
             <span className="brand-mark">
               <Dices size={20} aria-hidden="true" />
             </span>
             <div>
-              <h2>Roleta</h2>
+              <h2>Roleta Escolar <span className="faetec-word">FAETEC</span></h2>
               <p className="panel-subtitle">Pressione Espaço para girar quando nenhum campo estiver selecionado.</p>
             </div>
           </div>
@@ -302,6 +302,11 @@ export const WheelPage = ({ onHome }: WheelPageProps) => {
             <ArrowLeft size={17} aria-hidden="true" />
             Início
           </button>
+        </div>
+        <div className="turma-selector-bar">
+          <Users size={18} aria-hidden="true" />
+          <span>Turma: {wheel.name}</span>
+          <ChevronDown size={18} aria-hidden="true" />
         </div>
         <div className="roulette-stage">
           <RouletteWheel

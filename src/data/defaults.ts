@@ -7,11 +7,11 @@ export const THEME_COLORS: Record<
   { name: string; primary: string; secondary: string; soft: string; contrast: string }
 > = {
   emerald: {
-    name: 'Esmeralda',
-    primary: '#0b766f',
-    secondary: '#138f86',
-    soft: '#e6f4f2',
-    contrast: '#063c38',
+    name: 'FAETEC',
+    primary: '#003a8c',
+    secondary: '#0057d9',
+    soft: '#eaf3ff',
+    contrast: '#062d68',
   },
   cyan: {
     name: 'Ciano',
